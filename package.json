@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"cd client && npm start\" \"cd client/src && sass --watch .\""
+    "start": "concurrently \"cd client && npm start\" \"cd client/src && sass --watch .\"",
+    "start-server": "npm start"
   },
   "repository": {
     "type": "git",

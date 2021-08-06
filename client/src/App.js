@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles/styles.css'
+import { BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
+
+import AddFunds from './pages/AddFunds';
+import CashOut from './pages/CashOut';
+import CheckBalance from './pages/CheckBalance';
+import NumberGenerator from './pages/NumberGenerator';
+import IssueGiftCard from './pages/IssueGiftCard';
+import Confirmation from './pages/Confirmation';
+import Menu from './components/Menu';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Menu />
+      <Switch>
+        <Route exact path="/"><Redirect to="/issue-gift-card"/></Route>
+        <Route exact path="/issue-gift-card" component={IssueGiftCard}/>
+        <Route exact path="/check-balance" component={CheckBalance} />
+        <Route exact path="/add-funds" component={AddFunds}/>
+        <Route exact path="/cash-out" component={CashOut} />
+        <Route exact path="/number-generator" component={NumberGenerator} />
+        <Route exact path="/confirmation" component={Confirmation} />
+      </Switch>
+    </Router>
   );
 }
 
