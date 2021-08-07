@@ -1,7 +1,7 @@
 @media(min-width: 300px) {
     .show-menu,
     .hide-menu {
-        position: absolute;
+        position: fixed;
         right: 0;
         bottom: 0;
         left: 0;
@@ -17,6 +17,7 @@
         .menu-items {
             margin-top: 10%;
             padding: 0 20px;
+            font-size: 1.25rem;
 
             .active-page > * {
                 color: #6495ed;
@@ -25,6 +26,11 @@
 
             :hover {
                 color: #6495ed;
+            }
+
+            div {
+                display: flex;
+                align-items: center;
             }
 
             & > * {
@@ -38,6 +44,7 @@
 
                 :nth-child(1) {
                     margin-right: 10px;
+                    font-size: 1.75rem;
                 }
             }
         }

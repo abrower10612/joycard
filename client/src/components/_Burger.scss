@@ -1,7 +1,7 @@
 @media(min-width: 300px) {
     .burger {
-        position: fixed;
-        top: 5%;
+        position: absolute;
+        top: 30%;
         right: 5%;
         display: flex;
         flex-direction: column;
